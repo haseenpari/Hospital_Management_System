@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <a class="navbar-brand" href="#">Hospital Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active homeToggle"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="sidebuttons">
+            <div class="b1"><a href="#">Home</a></div>
+            <div class="b2"><a href="#">Doctors</a></div>
+            <div class="b3"><a href="#">Beds</a></div>
+            <div class="b4"><a href="#">Appointments</a></div>
+            <div class="b6"><a href="#">Health Prediction</a></div>
+            <div class="b5"><a href="#">Patients</a></div>
+        </div>
+
+        <div class="box" id="boxx">
+            <div class="cards" id="cards-container">
+                <div class="card1" id="card1">
+                    <span class="card-title">Available Doctors</span>
+                    <img class="logo" src="images/stethscope.png" alt="profile" width="70px">
+                    <p class="t1">Total</p>
+                    <p class="number">6</p>
+                </div>
+                <div class="card2">
+                    <span class="card-title">Available Beds:</span>
+                    <img src="images/bed.png" alt="" class="logo">
+                    <p class="t1">Total</p>
+                     <p class="number" id="total-beds-count">0</p> 
+                </div>
+                <div class="card3">
+                    <span class="card-title">Patient Records</span>
+                    <img src="images/indoor.png" alt="" class="logo">
+                    <p class="t1">Total</p>
+                    <p class="number">6</p>
+                </div>
+                <div class="card4">
+                    <span class="card-title">Appointments</span>
+                    <img src="images/schedule.png" style="width: 86px; height: 86px;" alt="" class="logo">
+                    <p class="t1">Total</p>
+                    <p class="number">4</p>
+                </div>
+                <div class="card5">
+                    <span class="card-title">Blood Donors</span>
+                    <img src="images/donor.png" alt="" class="logo">
+                    <p class="t1">Total</p>
+                    <p class="number">8</p>
+                </div>
+                <div class="card6">
+                    <span class="card-title">Medicines</span>
+                    <img src="images/medicine.png" alt="" class="logo">
+                    <p class="t1">Total</p>
+                    <p class="number">8</p>
+                </div>
+            </div>            
+<div id="custom-container" class="box2" class="editable-container" style="display:none;">
+    <a href="#" class="back-button" id="inventory-back-button">Back</a>
+    <h2>Welcome to Health Prediction Algorithm</h2>
+    <p>Click <a href="login/loginpage.html">here</a> to login and check your health data!</p>
+</div>    
+            <div id="editable-container" class="editable-container">
+                <a href="#" class="back-button" id="back-button">Back</a>
+                <i id="toggle-icon" class="fas fa-th-large"></i>
+                <h3>Doctors Data</h3>
+                <table id="doctors-table" border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Specialization</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <div id="box-view" style="display: none;">
+                    <div class="cardd1">
+                        <span class="card-title">Dr. A.K. Singh</span>
+                       <div class="logo"><img class="profile" src="images/human.png" alt="profile" width="60px"></div>
+                        <p class="t01">CARDIOLOGIST</p>
+                        <p class="t2">MBBS (USA)</p>
+                        <p class="rating">4.8</p>
+                        <img src="images/star.png" width="18px" class="star">
+                        <div class="consult">Consultation Fee<br><span class="fee">₹ 499/-</span> </div>
+                        <button class="button-b">Consult Now</button>
+                    </div>
+                    <div class="cardd2">
+                        <span class="card-title">Dr. Sanjay Gupta</span>
+                        <div class="logo"><img class="profile" src="images/human.png" alt="profile" width="60px"></div>
+                        <p class="t01">NEUROLOGIST</p>
+                        <p class="t2">MBBS (USA)</p>
+                        <p class="rating">3.9</p>
+                        <img src="images/star.png" width="18px" class="star">
+                        <div class="consult">Consultation Fee<br><span class="fee">₹ 499/-</span> </div>
+                        <button class="button-b">Consult Now</button>
+                    </div>
+                    <div class="cardd3">
+                        <span class="card-title">Dr. Rajesh Kumar</span>
+                        <div class="logo"> <img class="profile" src="images/human.png" alt="profile" width="60px"></div>
+                        <p class="t01">ONCOLOGIST</p>
+                        <p class="t2">MBBS (USA)</p>
+                        <p class="rating">4.3</p>
+                        <img src="images/star.png" width="18px" class="star">
+                        <div class="consult">Consultation Fee<br><span class="fee">₹ 499/-</span> </div>
+                        <button class="button-b">Consult Now</button>
+                    </div>
+                    <div class="cardd4">
+                        <span class="card-title">Dr. Anjali Sharma</span>
+                        <div class="logo"> <img class="profile" src="images/woman.png" alt="profile" width="60px"> </div>
+                        <p class="t01">SURGEON</p>
+                        <p class="t2">MBBS (USA)</p>
+                        <p class="rating">3.9</p>
+                        <img src="images/star.png" width="18px" class="star">
+                        <div class="consult">Consultation Fee<br><span class="fee">₹ 499/-</span> </div>
+                        <button class="button-b">Consult Now</button>
+                    </div>
+                    <div class="cardd5">
+                        <span class="card-title">Dr. Ashish Jain</span>
+                        <div class="logo"> <img class="profile" src="images/human.png" alt="profile" width="60px"> </div>
+                        <p class="t01">RADIOLOGIST</p>
+                        <p class="t2">MBBS (USA)</p>
+                        <p class="rating">4.0</p>
+                        <img src="images/star.png" width="18px" class="star">
+                        <div class="consult">Consultation Fee<br><span class="fee">₹ 499/-</span> </div>
+                        <button class="button-b">Consult Now</button>
+                    </div>
+                    <div class="cardd6">
+                        <span class="card-title">Dr. Rajesh Gupta</span>
+                        <div class="logo"> <img class="profile" src="images/human.png" alt="profile" width="60px"> </div>
+                        <p class="t01">DERMATOLOGIST</p>
+                        <p class="t2">MBBS (USA)</p>
+                        <p class="rating">4.0</p>
+                        <img src="images/star.png" width="18px" class="star">
+                        <div class="consult">Consultation Fee<br> <span class="fee">₹ 499/-</span> </div>
+                        <button class="button-b">Consult Now</button>
+                    </div>                    
+                </div>
+            </div>           
+        </div> 
+        <div id="hospital-cards-container" style="display: none;">
+        </div>
+        <div id="beds-container" class="box2" class="editable-container" style="display: none;">
+            <a href="#" class="back-button" id="beds-back-button">Back</a>
+            <h1 class="Hbed">Hospital Bed Occupancy Dashboard</h1>
+            <div id="beds-error-message" style="color:red;"></div>
+            <div class="bed-container" id="beds-container-inner">
+                <div id="beds-container" style="display: none;">
+                    <div id="beds-container-inner"></div>
+                    <button id="beds-back-button">Back</button>
+                </div>                
+            </div>
+            </div>
+            <div id="patients-container" class="box2" class="editable-container" style="display: none;">
+                <a href="#" class="back-button" id="patients-back-button">Back</a>
+                <h1 class="Hpet">Patient Data</h1>
+            </div>    
+            <div id="card4-container" class="box2" class="editable-container" style="display: none;">
+                <a href="#" class="back-button" id="appointments-back-button">Back</a>
+                <h1 class="Hpet hh12">Appointments Data</h1>
+                <div id="appointments12" style="display: none;" ></div>
+                <div id="appointments11" class="appointments">
+                    <div class="bookappointment">
+                    <span class="title3">Book an Appointment</span> 
+                    <img src="images/book.png" alt="" class="logo22"> 
+                    <button id="bookApp" class="button-c">Book Now</button>   
+                    </div>
+                    <div class="checkappointment">
+                        <span class="title3">Check Appointments</span> 
+                        <img src="images/calendar.png" alt="" class="logo22 logo23"> 
+                        <button id="checkApp" class="button-c">Check Now</button>
+                    </div>
+                </div>
+                </div>
+                <div id="inventory-container" class="box2" class="editable-container" style="display: none;">
+                    <a href="#" class="back-button" id="inventory-back-button">Back</a>
+                    <h1 class="Hpet Hpet2">Available Blood Donors Nearby</h1>
+                    <table id="doctors-table" border="1">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name</th>
+                                <th>Contact Number</th>
+                                <th>Status</th>
+                                <th>Blood Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Saurabh Chhabra</td>
+                                <td>8077750062</td>
+                                <td>Available</td>
+                                <td>AB+</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Aditya Yadav</td>
+                                <td>8958372612</td>
+                                <td>Available</td>
+                                <td>O+</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tushar</td>
+                                <td>9878221223</td>
+                                <td>Available</td>
+                                <td>A+</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Sachin</td>
+                                <td>8765553322</td>
+                                <td>Available</td>
+                                <td>A-</td>
+                            
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Adnan</td>
+                                <td>9098787699</td>
+                                <td>Available</td>
+                                <td>O-</td>
+                       
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Abhinav</td>
+                                <td>7866564433</td>
+                                <td>Available</td>
+                                <td>B+</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Aditya</td>
+                                <td>9877665544</td>
+                                <td>Available</td>
+                                <td>B+</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Ayush Singh</td>
+                                <td>9875544332</td>
+                                <td>Available</td>
+                                <td>B-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div> 
+                    <div id="medicines-container" class="box2" class="editable-container" style="display: none;">
+                        <a href="#" class="back-button" id="medicines-back-button">Back</a>
+                        <h1 class="Hpet">Medicines Data</h1>
+                        <table id="doctors-table" border="1">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Medicine Name</th>
+                                    <th>Salts</th>
+                                    <th>Manufacturer</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Paracetamol</td>
+                                    <td>Acetaminophen</td>
+                                    <td>ABC Pharmaceuticals</td>
+                                    <td>₹50</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Amoxicillin</td>
+                                    <td>Amoxicillin Trihydrate</td>
+                                    <td>XYZ Pharma</td>
+                                    <td>₹120</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Ibuprofen</td>
+                                    <td>Ibuprofen</td>
+                                    <td>HealthCare Ltd.</td>
+                                    <td>₹80</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Lisinopril</td>
+                                    <td>Lisinopril Dihydrate</td>
+                                    <td>Medico Corp.</td>
+                                    <td>₹115</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Metformin</td>
+                                    <td>Metformin Hydrochloride</td>
+                                    <td>Pharma Plus</td>
+                                    <td>₹102</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Aspirin</td>
+                                    <td>Acetylsalicylic Acid</td>
+                                    <td>Global Pharma</td>
+                                    <td>₹30</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Atorvastatin</td>
+                                    <td>Atorvastatin Calcium</td>
+                                    <td>CardioMeds</td>
+                                    <td>₹200</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Omeprazole</td>
+                                    <td>Omeprazole Magnesium</td>
+                                    <td>Digestive Health Inc.</td>
+                                    <td>₹70</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button id="bookApp" class="orderB">Order Now</button>
+                        </div>    
+    </div>   
+    <script src="script.js"></script>   
+    <script src="appointment.js"></script>    
+    <script src="booking.js"></script>       
+</body>
+</html>

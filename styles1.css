@@ -1,0 +1,228 @@
+.button-b {
+  font-style: italic;
+  display: inline-block;
+  padding: 14px 6px;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.button-b:focus {
+  outline: none;
+}
+
+.button-b:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(76, 206, 64);
+  border-radius: 10px;
+  z-index: -2;
+}
+
+.button-b:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #057837;
+  transition: all 0.3s;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.button-b:hover {
+  color: #fff;
+}
+
+.button-b:hover:before {
+  width: 100%;
+}
+#editable-container h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 31px;
+  text-align: center;
+}
+#editable-container {
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+#editable-container::-webkit-scrollbar {
+  width: 15px;
+}
+#editable-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+#editable-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+#editable-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+.button-c {
+  font-style: italic;
+  display: inline-block;
+  padding: 14px 45px;
+  border-radius: 51px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  bottom: 22px;
+  left: 266px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.button-c:focus {
+  outline: none;
+}
+
+.button-c:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(76, 206, 64);
+  border-radius: 10px;
+  z-index: -2;
+}
+
+.button-c:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #057837;
+  transition: all 0.3s;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.button-c:hover {
+  color: #fff;
+}
+
+.button-c:hover:before {
+  width: 100%;
+}
+.bookappointment, .checkappointment {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.button-c {
+  position: relative; 
+  z-index: 1;
+  bottom: 0;
+  left: 0; 
+}
+
+.hospital-card{
+  width: 266px;
+  height: 206px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: none;
+  margin: 35px 0 0 22px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 7px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.hospital-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 7px 30px rgba(0, 0, 0, 0.29);
+}
+#appointments-back-button2{
+  position: absolute;
+  top: 291px;
+}
+.hospital-name {
+  font-weight: bold;
+  margin-bottom: 10px; 
+  text-align: center; 
+  width: 100%; 
+  position: relative;
+  font-size: 19px;
+  font-weight: 600;
+  color: #308ea2;
+  left: 0px;
+  top: 22px;
+}
+
+.hospital-card p {
+  margin: 0; 
+  width: 100%; 
+  text-align: center; 
+  
+}
+.button-d{
+  position: relative;
+    margin-left: 40px;
+    padding: 15px 15px;
+    margin-left: 70px;
+}
+.suggestions-container {
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #fff;
+  position: absolute;
+  z-index: 1000;
+  width: 33%;
+  top: 49px;
+  display: none;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+.bed-green{
+  width: 50px;
+}
